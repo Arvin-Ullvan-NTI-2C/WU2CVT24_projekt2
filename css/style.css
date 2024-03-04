@@ -8,7 +8,7 @@
 }
 
 #huvud_body {
-    background-color: black;
+    background: black;
 }
 .main_card{
     width: 600px;
@@ -23,8 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
-  
 }
 
 .div_card::before {
@@ -54,6 +52,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 .card .background {
     position: absolute;
     left: 0;
@@ -64,9 +63,10 @@
     object-fit: cover;
     pointer-events: none;
     filter: brightness(0.25);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     opacity: 0;
-
 }
+
 .card:hover .background {
     opacity: 1;
 }
@@ -164,4 +164,199 @@ footer {
 h3 {
     position: relative;
     margin-bottom: 20px;
+}
+#nav_huvud {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        --burgerline_width: 30px;
+        --burgerline_height: 6px;
+        --burgerline_margin: 5px;
+    
+        --background_color: solid black;
+    }
+    .main_card{
+        display: none;
+    }
+    .div_card {
+        display: none;
+    }
+    
+    .info p {
+        display: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+        --burgerline_width: 30px;
+        --burgerline_height: 6px;
+        --burgerline_margin: 5px;
+        
+        --background_color: black;
+    }
+    
+    
+    #nav_huvud {
+        height: 100px;
+        width: 100%;
+        background: black;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+        border-bottom: 2px solid white;
+        position: sticky;
+        top: 0;
+        grid-area: nav;
+    }
+
+    nav {
+        background: solid black;
+        z-index: 2;
+    }
+    
+    
+    .links_visible {
+        transform: translateY(500px);
+        opacity: 1;
+    }
+    
+    .burger_line {
+        width: var(--burgerline_width);
+        height: var(--burgerline_height);
+        margin: var(--burgerline_margin);
+        background: white;
+        border-radius: 20%;
+        transition: all 0.5s;
+    }
+    
+    #link_list {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        position: absolute;
+        top: -400px;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        z-index: 1;
+        border: 1px solid white;
+        background-color: black;
+    }
+    
+    #burger {
+        margin-right: 80px;
+        cursor: pointer;
+    }
+    
+    #link_list a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.25rem;
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        width: 200px;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    
+    #link_list a:hover {
+        background: white;
+        color: black;
+    }
+    
+    .burger_in_x_form #burger_line_2 {
+        opacity: 0;
+    }
+    
+    .burger_in_x_form #burger_line_1 {
+        transform: translateY(calc(var(--burgerline_height) + var(--burgerline_margin))) rotate(45deg);
+    }
+    
+    .burger_in_x_form #burger_line_3 {
+        transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
+    }
+
+    #gridwrapper_huvud {
+        box-sizing: border-box;
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 500px 100px;
+        grid-template-areas:
+        "nav"
+        "se1"
+        "se2"
+        "foo"
+        ;
+    }
+
+    #section1 {
+        z-index: -2;
+    }
+
+    .logga {
+        height: 300px;
+        width: auto;
+        position: relative;
+        margin-top: 50px;
+        margin-left: 75px;
+    }
+
+    h2 {
+        font-size: 34px;
+        position: relative;
+        margin-top: 0px;
+        margin-left: 300px;
+        margin-bottom: 30px;
+    }
+    
+    .om_oss {
+        font-size: 20px;
+        line-height: 40px;
+        position: relative;
+        margin-left: 100px;
+        z-index: -2;
+    }
+    
+    #section2 {
+        grid-area: se2;
+    }
+    
+    footer {
+        background-color: black;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: foo;
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 200px;
+    }
+    
+    .contact-info,
+    .social-media {
+        text-align: center;
+        position: relative;
+        margin-bottom: 100px;
+    }
+    
+    h3 {
+        position: relative;
+        margin-bottom: 20px;
+    }
 }
