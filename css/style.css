@@ -228,7 +228,6 @@ h3 {
     
     .links_visible {
         transform: translateY(500px);
-        opacity: 1;
     }
     
     .burger_line {
