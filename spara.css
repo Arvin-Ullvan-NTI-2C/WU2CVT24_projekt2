@@ -1,0 +1,23 @@
+#section_img1 {
+    grid-area: im1;
+    display: flex;
+    height: 200px;
+    width: auto;
+    
+}
+
+#section_img2 {
+    grid-area: im2;
+    display: flex;
+    height: 300px;
+    width: auto;
+}
+
+#section_img3 {
+    grid-area: im3;
+    display: flex;
+    height: 300px;
+    width: auto;
+    position: relative;
+    margin-bottom: 3000px;
+}
