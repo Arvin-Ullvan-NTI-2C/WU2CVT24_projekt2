@@ -391,3 +391,109 @@ h3 {
         padding: 20px;
     }
 }
+
+#JWST_body {
+    background-color: black;
+}
+
+#JWST_gridwrapper {
+    box-sizing: border-box;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav nav"
+    "hea hea"
+    "se1 se2"
+    "se4 se3"
+    "se5 se6"
+    "foo foo"
+    ;
+}
+
+#JWST_header {
+    grid-area: hea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#JWST_nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#JWST_linklist{
+    display:flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#link {
+    list-style: none;
+    text-decoration: none;
+}
+
+#JWST_section1 {
+    grid-area: se1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#JWST_section2 {
+    grid-area: se2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#JWST_section3 {
+    grid-area: se3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#JWST_section4 {
+    grid-area: se4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#JWST_section5 {
+    grid-area: se5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#JWST_section6 {
+    grid-area: se6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#JWST_img {
+    width: 500px;
+    height: auto;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#JWST_p1 {
+    position: relative;
+    margin-right: 120px;
+}
