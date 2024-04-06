@@ -151,20 +151,20 @@ footer {
     grid-area: foo;
     position: relative;
     margin-top: 200px;
-    margin-bottom: 200px;
 }
 
 .contact-info,
 .social-media {
     text-align: center;
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 h3 {
     position: relative;
     margin-bottom: 20px;
 }
+
 #nav_huvud {
     display: none;
 }
@@ -221,7 +221,7 @@ h3 {
         grid-area: nav;
     }
 
-    nav {
+    #nav_huvud {
         background: solid black;
         z-index: 2;
     }
@@ -392,6 +392,7 @@ h3 {
     }
 }
 
+
 #JWST_body {
     background-color: black;
 }
@@ -402,6 +403,7 @@ h3 {
     height: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
     grid-template-areas:
     "nav nav"
     "hea hea"
@@ -424,7 +426,6 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #JWST_linklist{
@@ -435,6 +436,10 @@ h3 {
     text-decoration: none;
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+#JWST_linklist :hover {
+    text-decoration: underline;
 }
 
 #link {
@@ -496,4 +501,101 @@ h3 {
 #JWST_p1 {
     position: relative;
     margin-right: 120px;
+}
+
+#JWST_p2 {
+    position: relative;
+    margin-left: 120px;
+}
+
+#JWST_p3 {
+    position: relative;
+    margin-right: 120px;
+}
+
+#Pictures_gridwrapper{
+    box-sizing: border-box;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px 80px 600px 100px;
+    row-gap: 40px;
+    grid-template-areas:
+    "nav "
+    "hea"
+    "se7"
+    "foo"
+    ;
+
+}
+
+#Pictures_body {
+    background-color: black;
+}
+
+#Pictures_header {
+    grid-area: hea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Pictures_nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Pictures_linklist{
+    display:flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#Pictures_linklist :hover {
+    text-decoration: underline;
+}
+
+#link {
+    list-style: none;
+    text-decoration: none;
+}
+
+div.scroll-container {
+    background-color: black;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+div.scroll-container::-webkit-scrollbar{
+    height: 6px;
+}
+
+div.scroll-container::-webkit-scrollbar-track{
+    background-color: black;
+    border-radius: 12px;
+}
+
+div.scroll-container::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 12px;
+}
+  
+div.scroll-container img {
+    padding: 10px;
+    height: 600px;
+}
+
+#Pictures_section {
+    grid-area: se7;
+}
+
+#Pictures_footer {
+    grid-area: foo;
 }
